@@ -12,6 +12,33 @@ ReactFC.fcRoot(FusionCharts, Column2D, FusionTheme);
 
 class FPie extends Component {
   render() {
+    const chartData = [
+      {
+        label: "Botnet",
+        value: "290"
+      },
+      {
+        label: "DOS",
+        value: "260"
+      },
+      {
+        label: "DDOS",
+        value: "180"
+      },
+      {
+        label: "Port Scan",
+        value: "140"
+      },
+      {
+        label: "Sniff",
+        value: "115"
+      },
+      {
+        label: "Other",
+        value: "100"
+      },
+    ];
+
     const chartConfigs = {
       type: "pie2d", // The chart type
       width: "100%", // Width of the chart
@@ -20,8 +47,7 @@ class FPie extends Component {
       dataSource: {
         // Chart Configuration
         chart: {
-          caption: "My title",
-          subCaption: "subtitle",
+          caption: "Top Incident Types",
           showlegend: "1",
           showpercentvalues: "1",
           legendposition: "bottom",
@@ -31,7 +57,7 @@ class FPie extends Component {
             "#0A507B,#5AD8A6,#5B8FF9,#F6BD16,#E8684A,#6DC8EC,#9270CA,#FF9D4D,#269A99,#FF99C3",
         },
         // Chart Data
-        data: this.props.chartData,
+        data: chartData,
       },
     };
 

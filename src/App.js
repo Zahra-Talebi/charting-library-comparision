@@ -1,58 +1,122 @@
 import "antd/dist/antd.css";
 import "./App.css";
-import { Tabs } from "antd";
-import PieComponent from "./components/PieComponent";
+import { Tabs, Row, Col, Card } from "antd";
+
+import HPie from "./components/highcharts/pie";
+import FPie from "./components/fusioncharts/pie";
+
+import HDonut from "./components/highcharts/donut";
+import FDonut from "./components/fusioncharts/donut";
+
+import HArea from "./components/highcharts/area";
+import FArea from "./components/fusioncharts/area";
+
+import HStackedBar from "./components/highcharts/stackedbar";
+import FStackedBar from "./components/fusioncharts/stackedbar";
+
+import MapChart from "./components/fusioncharts/worldmap";
+
+import FIranMap from "./components/fusioncharts/iranmap";
 
 const { TabPane } = Tabs;
 
 function App() {
   return (
     <div>
-      <Tabs tabPosition={"left"} >
+      <Tabs tabPosition={"left"}>
         <TabPane tab="Pie Chart" key="1">
-          <PieComponent />
+          <Row gutter={16}>
+            <Col span={12}>
+              <Card size="small" bordered title="Highcharts- Pie">
+                <HPie />
+              </Card>
+            </Col>
+            <Col span={12}>
+              <Card size="small" bordered title="Fusioncharts- Pie">
+                <FPie />
+              </Card>
+            </Col>
+          </Row>
         </TabPane>
         <TabPane tab="Donut Chart" key="2">
-          Donut Chart
+          <Row gutter={16}>
+            <Col span={12}>
+              <Card size="small" bordered title="Highcharts- Donut">
+                <HDonut />
+              </Card>
+            </Col>
+            <Col span={12}>
+              <Card size="small" bordered title="Fusioncharts- Donut">
+                <FDonut />
+              </Card>
+            </Col>
+          </Row>
         </TabPane>
-        <TabPane tab="Column Chart" key="3">
-          Column Chart
+        <TabPane tab="Area Chart" key="3">
+          <Row gutter={16}>
+            <Col span={24}>
+              <Card size="small" bordered title="Highcharts- Area">
+                <HArea />
+              </Card>
+            </Col>
+            <Col span={24}>
+              <Card size="small" bordered title="Fusioncharts- Area">
+                <FArea />
+              </Card>
+            </Col>
+          </Row>
         </TabPane>
-        <TabPane tab="Group Column Chart" key="4">
-          Group Column Chart
+        <TabPane tab="Stacked Bar Chart" key="4">
+          <Row gutter={16}>
+            <Col span={12}>
+              <Card size="small" bordered title="Highcharts- Stacked Bar">
+                <HStackedBar />
+              </Card>
+            </Col>
+            <Col span={12}>
+              <Card size="small" bordered title="Fusioncharts- Stacked Bar">
+                <FStackedBar />
+              </Card>
+            </Col>
+          </Row>
         </TabPane>
-        <TabPane tab="Bar Chart" key="5">
-          Bar Chart
+        <TabPane tab="Iran Map" key="5">
+        <Row gutter={16}>
+            <Col span={12}>
+              <Card size="small" bordered title="Highcharts- Iran Map">
+                {/* <HStackedBar /> */}
+              </Card>
+            </Col>
+            <Col span={12}>
+              <Card size="small" bordered title="Fusioncharts- Iran Map">
+                <FIranMap />
+              </Card>
+            </Col>
+          </Row>
         </TabPane>
-        <TabPane tab="Group Bar Chart" key="6">
-          Group Bar Chart
+        <TabPane tab="World Map" key="6">
+        <Row gutter={16}>
+            <Col span={24}>
+              <Card size="small" bordered title="Fusioncharts- World Map">
+                <MapChart />
+              </Card>
+            </Col>
+          </Row>
         </TabPane>
-        <TabPane tab="Line Chart" key="7">
-          Line Chart
+        <TabPane tab="Iran Map with Bubble Chart" key="7">
+          Iran Map with Bubble Chart
         </TabPane>
-        <TabPane tab="Area Chart" key="8">
-          Area Chart
+        <TabPane tab="Heat Map" key="8">
+          Heat Map
         </TabPane>
-        <TabPane tab="Line & Area Chart" key="9">
-          Line & Area Chart
+        <TabPane tab="Calendar Heat Map" key="9">
+          Calendar Heat Map
         </TabPane>
-        <TabPane tab="Bubble Chart" key="10">
-          Bubble Chart
+        <TabPane tab="Live Attack" key="10">
+          Live Attack
         </TabPane>
-        <TabPane tab="Map" key="11">
-          Map
-        </TabPane>
-        <TabPane tab="Map & Bubble chart" key="12">
-          Map & Bubble chart
-        </TabPane>
-        <TabPane tab="Sparkline" key="13">
+        <TabPane tab="Sparkline" key="11">
           Sparkline
-        </TabPane>
-        <TabPane tab="Heatmap" key="14">
-          Heatmap
-        </TabPane>
-        <TabPane tab="Live Attack" key="15">
-        Live Attack
         </TabPane>
       </Tabs>
     </div>

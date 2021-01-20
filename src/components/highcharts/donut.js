@@ -3,7 +3,7 @@ import { Input, Switch } from "antd";
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
 
-class HPie extends Component {
+class HDonut extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -70,6 +70,9 @@ class HPie extends Component {
       title: {
         text: this.state.title,
       },
+      subtitle: {
+        text: "subtitle",
+      },
       tooltip: {
         pointFormat: "{series.name}: <b>{point.percentage:.1f}%</b>",
       },
@@ -92,9 +95,11 @@ class HPie extends Component {
       colors: colors,
       series: [
         {
-          name: "Brands",
+          name: "percent",
           colorByPoint: true,
           data: chartData,
+          size: "80%",
+          innerSize: "50%",
         },
       ],
     };
@@ -126,4 +131,4 @@ class HPie extends Component {
     );
   }
 }
-export default HPie;
+export default HDonut;
