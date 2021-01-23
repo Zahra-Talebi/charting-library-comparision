@@ -1,14 +1,9 @@
 import React, { Component } from "react";
-// Include the react-fusioncharts component
-import ReactFC from "react-fusioncharts";
-// Include the fusioncharts library
+import ReactFusioncharts from "react-fusioncharts";
 import FusionCharts from "fusioncharts";
-// Include the chart type
 import Column2D from "fusioncharts/fusioncharts.charts";
-// Include the theme as fusion
 import FusionTheme from "fusioncharts/themes/fusioncharts.theme.fusion";
-// Adding the chart and theme as dependency to the core fusioncharts
-ReactFC.fcRoot(FusionCharts, Column2D, FusionTheme);
+ReactFusioncharts.fcRoot(FusionCharts, Column2D, FusionTheme);
 
 class FPie extends Component {
   render() {
@@ -61,7 +56,7 @@ class FPie extends Component {
       },
     };
 
-    return <ReactFC {...chartConfigs} />;
+    return <ReactFusioncharts {...chartConfigs} />;
   }
 }
 export default FPie;

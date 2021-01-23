@@ -17,7 +17,7 @@ class HStackedBar extends Component {
       "#FF99C3",
     ];
 
-    const dataSource = {
+    const options = {
       chart: {
         type: "bar",
       },
@@ -81,7 +81,7 @@ class HStackedBar extends Component {
         },
       ],
     };
-    return <HighchartsReact highcharts={Highcharts} options={dataSource} />;
+    return <HighchartsReact highcharts={Highcharts} options={options} />;
   }
 }
 export default HStackedBar;

@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import ReactFC from "react-fusioncharts";
+import ReactFusioncharts from "react-fusioncharts";
 import FusionCharts from "fusioncharts";
 import FusionMaps from "fusioncharts/fusioncharts.maps";
 import IR from "fusioncharts/maps/fusioncharts.worldwithcountries";
 import FusionTheme from "fusioncharts/themes/fusioncharts.theme.fusion";
-ReactFC.fcRoot(FusionCharts, FusionMaps, IR, FusionTheme);
+ReactFusioncharts.fcRoot(FusionCharts, FusionMaps, IR, FusionTheme);
 
-class FIranMap extends Component {
+class FWorldMap extends Component {
   render() {
     //IDs is here: https://www.fusioncharts.com/dev/maps/spec-sheets/worldwithcountries
     const chartData = [
@@ -111,7 +111,7 @@ class FIranMap extends Component {
       },
     };
 
-    return <ReactFC {...chartConfigs} />;
+    return <ReactFusioncharts {...chartConfigs} />;
   }
 }
-export default FIranMap;
+export default FWorldMap;

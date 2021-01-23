@@ -60,7 +60,7 @@ class HPie extends Component {
       },
     ];
 
-    const dataSource = {
+    const options = {
       chart: {
         plotBackgroundColor: null,
         plotBorderWidth: null,
@@ -100,7 +100,7 @@ class HPie extends Component {
     };
     return (
       <Fragment>
-        <HighchartsReact highcharts={Highcharts} options={dataSource} />
+        <HighchartsReact highcharts={Highcharts} options={options} />
         <div>
           <label>data Labels Enable </label>
           <Switch

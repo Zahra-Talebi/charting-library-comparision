@@ -14,9 +14,13 @@ import FArea from "./components/fusioncharts/area";
 import HStackedBar from "./components/highcharts/stackedbar";
 import FStackedBar from "./components/fusioncharts/stackedbar";
 
-import MapChart from "./components/fusioncharts/worldmap";
+import HWorldMap from "./components/highcharts/worldmap";
+import FWorldMap from "./components/fusioncharts/worldmap";
 
+import HIranMap from "./components/highcharts/iranmap";
 import FIranMap from "./components/fusioncharts/iranmap";
+
+import HIranMapBubble from './components/highcharts/iranmapbubble'
 
 const { TabPane } = Tabs;
 
@@ -81,10 +85,10 @@ function App() {
           </Row>
         </TabPane>
         <TabPane tab="Iran Map" key="5">
-        <Row gutter={16}>
+          <Row gutter={16}>
             <Col span={12}>
               <Card size="small" bordered title="Highcharts- Iran Map">
-                {/* <HStackedBar /> */}
+                <HIranMap />
               </Card>
             </Col>
             <Col span={12}>
@@ -95,16 +99,34 @@ function App() {
           </Row>
         </TabPane>
         <TabPane tab="World Map" key="6">
-        <Row gutter={16}>
+          <Row gutter={16}>
+            <Col span={24}>
+              <Card size="small" bordered title="Highcharts- World Map">
+                <HWorldMap />
+              </Card>
+            </Col>
+          </Row>
+          <Row gutter={16}>
             <Col span={24}>
               <Card size="small" bordered title="Fusioncharts- World Map">
-                <MapChart />
+                <FWorldMap />
               </Card>
             </Col>
           </Row>
         </TabPane>
         <TabPane tab="Iran Map with Bubble Chart" key="7">
-          Iran Map with Bubble Chart
+        <Row gutter={16}>
+            <Col span={12}>
+              <Card size="small" bordered title="Highcharts- Iran Map with Bubble">
+                <HIranMapBubble />
+              </Card>
+            </Col>
+            <Col span={12}>
+              <Card size="small" bordered title="Fusioncharts- Iran Map">
+                {/* <FIranMap /> */}
+              </Card>
+            </Col>
+          </Row>
         </TabPane>
         <TabPane tab="Heat Map" key="8">
           Heat Map

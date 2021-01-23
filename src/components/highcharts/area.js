@@ -17,7 +17,7 @@ class HArea extends Component {
       "#FF99C3",
     ];
 
-    const dataSource = {
+    const options = {
       chart: {
         type: "areaspline",
       },
@@ -86,7 +86,7 @@ class HArea extends Component {
 
     return (
       <Fragment>
-        <HighchartsReact highcharts={Highcharts} options={dataSource} />
+        <HighchartsReact highcharts={Highcharts} options={options} />
       </Fragment>
     );
   }
